@@ -36,8 +36,8 @@ class Lyrics extends Component {
     console.log(track);
     console.log(track.updated_time);
     if (
-      track == undefined ||
-      lyrics == undefined ||
+      track === undefined ||
+      lyrics === undefined ||
       (track === Object.keys(track).length) === 0 ||
       Object.keys(lyrics).length === 0
     ) {
