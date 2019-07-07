@@ -9,13 +9,17 @@ const Track = props => {
         <div className="card-body">
           <h5>{track.artist_name}</h5>
           <p className="card-text">
-            <strong>{track.track_name}</strong>
+            <strong>
+              {' '}
+              <i className="fas fa-play" />
+              {track.track_name}
+            </strong>
             <br />
-            <strong>{track.album_name}</strong>
+            {track.album_name}
           </p>
           <Link
             to={`lyrics/track/${track.track_id}`}
-            className="btn btn-dark btn-block">
+            className="btn btn-outline-success btn-block">
             View Lyrics
           </Link>
         </div>

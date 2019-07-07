@@ -45,38 +45,37 @@ class Lyrics extends Component {
     } else {
       return (
         <React.Fragment>
-          <Link to="/" className="btn btn-dark btn-sm mb-4 black">
-            Go Back
-            <div className="card">
-              <h5 className="card-header" style={{color: '#000000'}}>
-                {track.track_name} by {''}
-                <span className="text-secondary"> {track.artist_name}</span>
-              </h5>
-              <div className="card-body">
-                <p className="card-text" style={{color: '#000000'}}>
-                  {lyrics.lyrics_body}
-                </p>
-              </div>
-              <ul className="list-group mt-3" style={{color: '#000000'}}>
-                <li className="list-group-item">
-                  <strong>Album ID</strong>:{track.album_id}
-                </li>
-                <li className="list-group-item">
-                  <strong>Song Genre</strong>:{' '}
-                  {/* {track.primary_genres.music_genre_list[0]} */}
-                </li>
-                <li className="list-group-item">
-                  <strong> Explicit Words</strong>:
-                  {track.explicit === 0 ? 'No' : 'Yes'}
-                </li>
-
-                <li className="list-group-item">
-                  <strong>Release Date</strong>:
-                  <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
-                </li>
-              </ul>
-            </div>
+          <Link to="/" className="btn btn-success btn-sm mb-4 black">
+            Go Back{' '}
           </Link>
+          <div className="card">
+            <h5 className="card-header">
+              {track.track_name} by {''}
+              <span className="text-secondary"> {track.artist_name}</span>
+            </h5>
+            <div className="card-body">
+              <p className="card-text" style={{color: '#000000'}}>
+                {lyrics.lyrics_body}
+              </p>
+            </div>
+            <ul className="list-group mt-3">
+              <li className="list-group-item">
+                <strong>Album ID</strong>:{track.album_id}
+              </li>
+              <li className="list-group-item">
+                <strong>Song Genre</strong>: {}
+              </li>
+              <li className="list-group-item">
+                <strong> Explicit Words</strong>:
+                {track.explicit === 0 ? 'No' : 'Yes'}
+              </li>
+
+              <li className="list-group-item">
+                <strong>Release Date</strong>:
+                <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
+              </li>
+            </ul>
+          </div>
         </React.Fragment>
       );
     }
